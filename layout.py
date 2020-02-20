@@ -1,5 +1,7 @@
 #-------------------- layout functions -----------------------------#
 from formatting import *
+from db_operation import *
+
 import os
 
 
@@ -48,6 +50,10 @@ def admin_reg():
     Newline()
     name = get_name()
     Newline()
+    email = get_email()
+    Newline()
+    aptno = get_aptno()
+    Newline()
     city = get_city()
     Newline()
     state = get_state()
@@ -56,6 +62,8 @@ def admin_reg():
     Newline()
     pw = get_pw()
     Newline()
+    id = get_aid()
+    admin_insert(id,name,email,aptno,city,state,phn,pw)
 
 #--------------------------- User Reg Page ------------------------------------#
 def user_reg():
@@ -67,6 +75,10 @@ def user_reg():
     Newline()
     name = get_name()
     Newline()
+    email = get_email()
+    Newline()
+    aptno = get_aptno()
+    Newline()
     city = get_city()
     Newline()
     state = get_state()
@@ -74,4 +86,6 @@ def user_reg():
     phn  =  get_phn()
     Newline()
     pw = get_pw()
-    Newline()
+    Newline
+    id = get_uid()
+    user_insert(id,name,email,aptno,city,state,phn,pw)
